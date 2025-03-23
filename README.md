@@ -24,7 +24,7 @@ chip8 --rom <path_to_rom>
 ## Test ROMs
 - [x] Timendus' Chip8 Splash Screen
 - [x] IBM Logo
-- [ ] Corax+ Opcode Test
+- [x] Corax+ Opcode Test
 - [ ] Flags Test
 - [ ] Quirks Test (CHIP8 Only)
 
