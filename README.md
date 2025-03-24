@@ -1,7 +1,7 @@
 # Simple Chip-8
-CHIP-8 Emulator (Interpreter) written in C++ with SDL3.
-Built to be as reasonably modular as possible.
-This time actually complete *(hopefully)*.
+CHIP-8 Emulator (Interpreter) written in C++ with SDL3.  
+Built to be as reasonably modular as possible.  
+This time actually complete *(hopefully)*.  
 
 ### Build
 Compile using g++ (need to have SDL3 libraries installed)
@@ -43,7 +43,7 @@ Planning to add SUPER CHIP-8 capabilites after adding bells and whistles.
     </a>
 
 - <a href="https://multigesture.net/articles/how-to-write-an-emulator-chip-8-interpreter/">
-    <img src="https://www.google.com/s2/favicons?domain=multigesture.net" alt="Website Icon" width="16" height="16" style="vertical-align: middle;"/> How to write an emulator (CHIP-8 interpreter) - Multigesture.net
+    How to write an emulator (CHIP-8 interpreter) - Multigesture.net
     </a>
 
 - <a href="https://youtu.be/YHkBgR6yvbY?si=Fj21qiRvNa_rC_jQ">
