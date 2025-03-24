@@ -3,8 +3,15 @@ CHIP-8 Emulator (Interpreter) written in C++ with SDL3.
 Built to be as reasonably modular as possible.
 This time actually complete *(hopefully)*.
 
-### Usage
+### Build
+Compile using g++ (need to have SDL3 libraries installed)
+```bash
+g++ -O2 -lSDL3 src/main.cpp src/chip8.cpp src/graphics.cpp -o chip8
 ```
+*(not tested with -O3, but should work)*
+
+### Usage
+```bash
 chip8 --rom <path_to_rom>
 ```
 
@@ -15,9 +22,9 @@ chip8 --rom <path_to_rom>
 - [x] Building the Texture
 - [ ] Implement Delay Timer and Sound Timer
 
-## Additional Features
+### Additional Features
 - [ ] Variable Resolution
-- [ ] Config File
+- [ ] Configuration Support
 - [ ] Debug Mode
 - [ ] Better Frame Timing Management
 
@@ -30,10 +37,15 @@ chip8 --rom <path_to_rom>
 
 Planning to add SUPER CHIP-8 capabilites after adding bells and whistles.
 
-# Build
-Compile using g++ (need to have SDL3 libraries installed)
-Linux
-```
-g++ -O2 -lSDL3 src/main.cpp src/chip8.cpp src/graphics.cpp -o chip8
-```
-*(not tested with -O3, but should work)*
+## References
+- <a href="http://devernay.free.fr/hacks/chip8/C8TECH10.HTM">
+    <img src="https://www.google.com/s2/favicons?domain=devernay.free.fr" alt="Website Icon" width="16" height="16" style="vertical-align: middle;"/> Cowgod's Chip-8 Technical Reference
+    </a>
+
+- <a href="https://multigesture.net/articles/how-to-write-an-emulator-chip-8-interpreter/">
+    <img src="https://www.google.com/s2/favicons?domain=multigesture.net" alt="Website Icon" width="16" height="16" style="vertical-align: middle;"/> How to write an emulator (CHIP-8 interpreter) - Multigesture.net
+    </a>
+
+- <a href="https://youtu.be/YHkBgR6yvbY?si=Fj21qiRvNa_rC_jQ">
+    <img src="https://www.google.com/s2/favicons?domain=youtu.be" alt="Website Icon" width="16" height="16" style="vertical-align: middle;"/> Introduction to Emulation: Build your own CHIP-8 emulator in just 1 hour! - Iridescence
+    </a>
