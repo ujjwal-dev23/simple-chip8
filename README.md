@@ -16,11 +16,12 @@ chip8 --rom <path_to_rom>
 ```
 
 ## TODOs 
-- [ ] Input Handling
-- [ ] Error Handling and Logging
 - [x] Implement Opcodes (Partialy Done)
 - [x] Building the Texture
-- [ ] Implement Delay Timer and Sound Timer
+- [x] Implement Delay Timer and Sound Timer
+- [ ] Sound Timer Beep
+- [ ] Input Handling
+- [ ] Error Handling and Logging
 
 ### Additional Features
 - [ ] Variable Resolution
