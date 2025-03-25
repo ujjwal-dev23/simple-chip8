@@ -32,7 +32,7 @@ chip8 --rom <path_to_rom>
 - [x] Timendus' Chip8 Splash Screen
 - [x] IBM Logo
 - [x] Corax+ Opcode Test
-- [ ] Flags Test
+- [x] Flags Test
 - [ ] Quirks Test (CHIP8 Only)
 
 Planning to add SUPER CHIP-8 capabilites after adding bells and whistles.

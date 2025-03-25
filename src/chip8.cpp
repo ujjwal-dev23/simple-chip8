@@ -182,22 +182,28 @@ void CHIP8::fetch_and_decode_opcode()
       break;
 
       case 0x4:
-      V[x] += V[y];
-      if (x + y > 256)
       {
-        V[0xF] = 1;
+        uint16_t sum = V[x] + V[y];
+        V[x] = static_cast<uint8_t>(sum);
+        V[0xF] = (sum > 255) ? 1 : 0;
+        break;
       }
-      break;
       
       case 0x5:
-      V[x] -= V[y];
-      V[0xF] = (V[x] > V[y]);
-      break;
+      {
+        bool condition {V[x] >= V[y]};
+        V[x] -= V[y];
+        V[0xF] = (condition) ? 1 : 0;
+        break;
+      }
 
       case 0x6:
-      V[0xF] = (V[x] & 1) ? 1 : 0;
-      V[x] /= 2;
-      break;
+      {
+        bool condition = V[x] & 1;
+        V[x] /= 2;
+        V[0xF] = (condition) ? 1 : 0;
+        break;
+      }
 
       case 0x7:
       V[x] = V[y] - V[x];
@@ -205,9 +211,12 @@ void CHIP8::fetch_and_decode_opcode()
       break;
 
       case 0xE:
-      V[0xF] = V[x] >> 7;
-      V[x] *= 2;
-      break;
+      {
+        bool condition = V[x] >> 7;
+        V[x] *= 2;
+        V[0xF] = condition;
+        break;
+      }
     }
     break;
 
@@ -345,6 +354,17 @@ void CHIP8::fetch_and_decode_opcode()
   }
 
   increment_PC();
+
+  if (delay_timer > 0)
+  {
+    delay_timer--;
+  }
+
+  if (sound_timer > 0) 
+  {
+    // Play beep
+    sound_timer--;
+  }
 }
 
 void CHIP8::set_memory(uint16_t address, uint8_t data)
