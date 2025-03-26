@@ -22,6 +22,7 @@ chip8 --rom <path_to_rom>
 - [ ] Sound Timer Beep
 - [x] Input Handling
 - [ ] Error Handling and Logging
+- [ ] Separate Threads for Timers
 
 ### Additional Features
 - [ ] Variable Resolution
