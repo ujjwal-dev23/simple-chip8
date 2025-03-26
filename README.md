@@ -6,7 +6,7 @@ This time actually complete *(hopefully)*.
 ### Build
 Compile using g++ (need to have SDL3 libraries installed)
 ```bash
-g++ -O2 -lSDL3 src/main.cpp src/chip8.cpp src/graphics.cpp -o chip8
+g++ -std=c++23 -O2 -lSDL3 src/*.cpp -o chip8
 ```
 *(not tested with -O3, but should work)*
 
@@ -16,18 +16,19 @@ chip8 --rom <path_to_rom>
 ```
 
 ## TODOs 
-- [x] Implement Opcodes (Partialy Done)
-- [x] Building the Texture
+- [x] Implement Opcodes
+- [x] Drawing Graphics
 - [x] Implement Delay Timer and Sound Timer
 - [ ] Sound Timer Beep
-- [ ] Input Handling
+- [x] Input Handling
 - [ ] Error Handling and Logging
 
 ### Additional Features
 - [ ] Variable Resolution
-- [ ] Configuration Support
-- [ ] Debug Mode
+- [ ] Config File
+- [ ] Configurable keybindings
 - [ ] Better Frame Timing Management
+- [ ] Debug Mode
 
 ## Test ROMs
 - [x] Timendus' Chip8 Splash Screen
@@ -39,14 +40,8 @@ chip8 --rom <path_to_rom>
 Planning to add SUPER CHIP-8 capabilites after adding bells and whistles.
 
 ## References
-- <a style="text-decoration:none" href="http://devernay.free.fr/hacks/chip8/C8TECH10.HTM">
-    <img src="https://www.google.com/s2/favicons?domain=devernay.free.fr" alt="Website Icon" width="16" height="16" style="vertical-align: middle;"/> Cowgod's Chip-8 Technical Reference
-    </a>
+1. <img src="https://www.google.com/s2/favicons?domain=devernay.free.fr" alt="Website Icon" width="16" height="16" style="vertical-align: middle;"/>[Cowgod's Chip-8 Technical Reference](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM)
 
-- <a style="text-decoration:none" href="https://multigesture.net/articles/how-to-write-an-emulator-chip-8-interpreter/">
-    How to write an emulator (CHIP-8 interpreter) - Multigesture.net
-    </a>
+2. [How to write an emulator (CHIP-8 interpreter) - Multigesture.net](https://multigesture.net/articles/how-to-write-an-emulator-chip-8-interpreter/)
 
-- <a style="text-decoration:none" href="https://youtu.be/YHkBgR6yvbY?si=Fj21qiRvNa_rC_jQ">
-    <img src="https://www.google.com/s2/favicons?domain=youtu.be" alt="Website Icon" width="16" height="16" style="vertical-align: middle;"/> Introduction to Emulation: Build your own CHIP-8 emulator in just 1 hour! - Iridescence
-    </a>
+3. <img src="https://www.google.com/s2/favicons?domain=youtu.be" alt="Website Icon" width="16" height="16" style="vertical-align: middle;"/>[Introduction to Emulation: Build your own CHIP-8 emulator in just 1 hour! - Iridescence](https://youtu.be/YHkBgR6yvbY?si=Fj21qiRvNa_rC_jQ)

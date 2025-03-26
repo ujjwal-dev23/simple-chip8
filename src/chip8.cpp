@@ -59,8 +59,8 @@ void CHIP8::print_state() const
   std::cout << "PC : " << PC << '\n';
   std::cout << "SP : " << +SP << '\n';
   std::cout << "I : " << I << '\n';
-  /*std::cout << "Delay Timer : " << +delay_timer << '\n';*/
-  /*std::cout << "Sound Timer : " << +sound_timer << '\n';*/
+  std::cout << "Delay Timer : " << +delay_timer << '\n';
+  std::cout << "Sound Timer : " << +sound_timer << '\n';
   std::cout << "V : ";
   for(auto i : V) {
     std::cout << +i << " ";
@@ -377,4 +377,13 @@ void CHIP8::set_memory(uint16_t address, uint8_t data)
   {
     std::cerr << "Memory address out of bounds.\n";  
   }
+}
+
+void CHIP8::set_key(int index, uint8_t value)
+{
+  if (index < 0 || index > 16) {
+    std::cerr << "Tried setting key at invalid index\n";
+    return;
+  }
+  keyboard[index] = value;
 }

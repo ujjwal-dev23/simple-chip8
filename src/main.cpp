@@ -1,5 +1,6 @@
 #include "chip8.h"
 #include "graphics.h"
+#include "input.h"
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -70,7 +71,7 @@ int main (int argc, char* argv[])
   while (running)
   {
     cpu.fetch_and_decode_opcode();
-    handle_input(running);
+    handle_input(running, cpu);
     draw_graphics(cpu.framebuffer);
     cpu.print_state();
   }

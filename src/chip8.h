@@ -30,6 +30,7 @@ public:
   void increment_PC();
   void fetch_and_decode_opcode();
   void set_memory(uint16_t address, uint8_t data);
+  void set_key(int index, uint8_t value);
 };
 
 #endif // !CHIP8_H

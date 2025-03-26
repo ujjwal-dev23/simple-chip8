@@ -60,19 +60,3 @@ void draw_graphics(uint8_t framebuffer[])
   SDL_RenderPresent(renderer);
   SDL_Delay(16);
 }
-
-void handle_input(bool &running)
-{
-  SDL_Event e;
-
-  while (SDL_PollEvent(&e) > 0)
-  {
-    switch (e.type)
-    {
-      case SDL_EVENT_QUIT:
-      running = false;
-      break;
-      // TODO : Input Handling
-    }
-  }
-}

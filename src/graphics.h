@@ -14,6 +14,5 @@ bool error_check(bool true_exp, std::string error_text);
 void init_graphics();
 void deinit_graphics();
 void draw_graphics(uint8_t framebuffer[]);
-void handle_input(bool &running);
 
 #endif // !GRAPHICS_H
