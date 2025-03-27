@@ -4,9 +4,18 @@ Built to be as reasonably modular as possible.
 This time actually complete *(hopefully)*.  
 
 ### Build
-Compile using g++ (need to have SDL3 libraries installed)
+> Requires SDL3 Libraries to be installed on the system  
+
+Using [Meson](https://mesonbuild.com/)  
 ```bash
-g++ -std=c++23 -O2 -lSDL3 src/*.cpp -o chip8
+#From Root Directory
+meson setup build
+cd build
+meson compile
+```
+Compile using g++
+```bash
+g++ -std=c++20 -O2 -lSDL3 src/*.cpp -o chip8
 ```
 *(not tested with -O3, but should work)*
 

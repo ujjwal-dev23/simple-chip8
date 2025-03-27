@@ -77,7 +77,8 @@ void CHIP8::fetch_and_decode_opcode()
 {
   opcode = memory[PC] << 8 | memory[PC + 1];
 
-  std::cout << std::hex << opcode << "\n";
+  /*Placeholder for Future Debugging Mode*/
+  /*std::cout << std::hex << opcode << "\n";*/
 
   uint8_t msn {static_cast<uint8_t>(opcode >> 12)}; //Most Significant Nibble
 

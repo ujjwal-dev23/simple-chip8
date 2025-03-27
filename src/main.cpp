@@ -63,8 +63,6 @@ int main (int argc, char* argv[])
   cpu.init();
   load_rom(romPath);
 
-  cpu.print_state();
-
   init_graphics();
 
   bool running {true};
@@ -73,7 +71,6 @@ int main (int argc, char* argv[])
     cpu.fetch_and_decode_opcode();
     handle_input(running, cpu);
     draw_graphics(cpu.framebuffer);
-    cpu.print_state();
   }
 
   deinit_graphics();
